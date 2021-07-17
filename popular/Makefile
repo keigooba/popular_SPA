@@ -22,3 +22,5 @@ all: deps
 deps:
 	$(NPMCMD) react-router-dom @types/react-router-dom
 	$(NPMCMD) axios
+	$(NPMCMD) @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
+	$(NPMCMD) styled-components
