@@ -3,12 +3,12 @@ import {VFC, memo} from "react";
 import {Login} from "../components/pages/Login";
 import {Page404} from "../components/pages/Page404";
 import {Home} from "../components/pages/user/Home";
-import {Agreement} from "../components/pages/Agreement";
-import {PrivacyPolicy} from "../components/pages/PrivacyPolicy";
 import {Route, Switch} from "react-router-dom";
 import {contactRoutes} from "./ContactRoutes";
 import {LoginUserProvider} from "../hooks/providers/useLoginUserProvider";
 import Layout from "../components/templates/Layout";
+import Agreement from "../components/pages/Agreement";
+import PrivacyPolicy from "../components/pages/PrivacyPolicy";
 
 const Router: VFC = memo(() => {
 	return (
@@ -20,13 +20,19 @@ const Router: VFC = memo(() => {
 					</Layout>
 				</Route>
 				<Route exact path="/home">
-					<Home />
+					<Layout>
+						<Home />
+					</Layout>
 				</Route>
 				<Route exact path="/agreement">
-					<Agreement />
+					<Layout>
+						<Agreement />
+					</Layout>
 				</Route>
 				<Route exact path="/privacy_policy">
-					<PrivacyPolicy />
+					<Layout>
+						<PrivacyPolicy />
+					</Layout>
 				</Route>
 				<Route
 					path="/contact"

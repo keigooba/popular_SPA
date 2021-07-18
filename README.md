@@ -1,6 +1,6 @@
 # popular_SPA
 
-[popular](https://github.com/keigooba/popular)をReactでSPA化
+[popular](https://github.com/keigooba/popular)をReactでSPA化<br />
 コンポーネント分割はatomic designを採用
 
 サイト URL:https://popular-32pe64nwja-an.a.run.app
@@ -10,7 +10,6 @@
 概要は[popular](https://github.com/keigooba/popular)に記載
 
 ## 初期設定
-
 
 
 ## 開発環境

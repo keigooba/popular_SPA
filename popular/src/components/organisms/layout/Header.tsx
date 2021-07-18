@@ -15,7 +15,7 @@ import {useAuth} from "../../../hooks/useAuth";
 import {useLoginUser} from "../../../hooks/providers/useLoginUserProvider";
 
 const Header: VFC = memo(() => {
-	const {login, loading} = useAuth();
+	const {login} = useAuth();
 
 	const {loginUser} = useLoginUser();
 	console.log(loginUser);
@@ -50,7 +50,7 @@ const Header: VFC = memo(() => {
 				</Flex>
 				{loginUser || (
 					<Flex marginLeft="auto">
-						<Button onClick={onClickLogin} isLoading={loading}>
+						<Button onClick={onClickLogin}>
 							<i className="fab fa-twitter-square"></i>
 							ログイン
 						</Button>

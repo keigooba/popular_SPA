@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Footer: VFC = memo(() => {
 	return (
-		<Container bg="#F5E5FF" minWidth="100%" position="fixed" bottom="0" p="5">
+		<Container bg="#F5E5FF" minWidth="100%" bottom="0" p="5">
 			<Text mb="4" fontWeight="bold">
 				&copy; popular
 			</Text>
