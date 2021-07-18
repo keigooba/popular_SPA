@@ -7,7 +7,6 @@ const theme = extendTheme({
         color: "gray.800",
         textAlign: "center",
         fontSize: "1.2rem",
-        minHeight: "960px",
       }
     }
   }

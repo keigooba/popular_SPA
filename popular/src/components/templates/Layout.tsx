@@ -1,4 +1,5 @@
 import {VFC, memo, ReactNode} from "react";
+import {Container} from "@chakra-ui/react";
 
 import Header from "../organisms/layout/Header";
 import Footer from "../organisms/layout/Footer";
@@ -12,7 +13,7 @@ const Layout: VFC<Props> = memo((props) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<Container minH="700px" minW="1140px" p="10">{children}</Container>
 			<Footer />
 		</>
 	);
