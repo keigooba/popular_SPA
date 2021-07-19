@@ -25,7 +25,7 @@ git clone https://github.com/keigooba/popular_SPA.git
 ```
 docker-compose build
 ```
-3. なぜかreact-scriptが動かないので、コンテナを起動してインストール
+3. なぜかreact-scriptsが動かないので、コンテナを起動してインストール
 ```
 docker-compose run --rm node sh -c "cd popular && npm i react-scripts"
 ```
