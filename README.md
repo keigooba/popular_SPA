@@ -19,13 +19,21 @@ https://hub.docker.com/
 localhostで起動・dockerコンテナ内確認
 1. gitリポジトリをクローンする
 ```
-git clone https://github.com/keigooba/popular.git
+git clone https://github.com/keigooba/popular_SPA.git
 ```
-2. リポジトリのルートディレクトリからdocker起動(port:8080が必要)
+2. dockerをビルド
 ```
-cd docker && docker-compose up -d
+docker-compose build
 ```
-3. dockerコンテナに入る
+3. なぜかreact-scriptが動かないので、コンテナを起動してインストール(なぜかインストール中core-jsで止まるので、下記を2回実行してください..)
+```
+docker-compose run --rm node sh -c "cd popular && npm i react-scripts"
+```
+4. docker起動(port:3000が必要)
+```
+docker-compose up -d
+```
+5. dockerコンテナに入る
 ```
 docker-compose exec node bash
 ```
