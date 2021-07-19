@@ -3,7 +3,7 @@
 [popular](https://github.com/keigooba/popular)をReactでSPA化<br />
 コンポーネント分割はatomic designを採用
 
-サイト URL:https://popular-32pe64nwja-an.a.run.app
+サイト URL:
 
 ## 概要
 
@@ -25,7 +25,7 @@ git clone https://github.com/keigooba/popular_SPA.git
 ```
 docker-compose build
 ```
-3. なぜかreact-scriptが動かないので、コンテナを起動してインストール(なぜかインストール中core-jsで止まるので、下記を2回実行してください..)
+3. なぜかreact-scriptが動かないので、コンテナを起動してインストール
 ```
 docker-compose run --rm node sh -c "cd popular && npm i react-scripts"
 ```
