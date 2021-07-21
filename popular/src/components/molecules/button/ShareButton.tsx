@@ -2,7 +2,7 @@ import {VFC, memo} from "react";
 
 import {Box, Text} from "@chakra-ui/react";
 import {FaTwitter, FaFacebook} from "react-icons/fa";
-import IconButton from "../atoms/button/IconButton";
+import IconButton from "../../atoms/button/IconButton";
 
 const ShareButton: VFC = memo(() => {
 	return (

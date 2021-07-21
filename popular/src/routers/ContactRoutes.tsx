@@ -1,6 +1,6 @@
-import {Contact} from "../components/pages/Contact";
-import {List} from "../components/pages/contact/List";
-import {Page404} from "../components/pages/Page404";
+import Contact from "../components/pages/Contact";
+import List from "../components/pages/contact/List";
+import Page404 from "../components/pages/Page404";
 
 export const contactRoutes = [
 	{
