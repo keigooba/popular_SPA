@@ -2,8 +2,8 @@ import {memo, VFC} from "react";
 import {Text, UnorderedList, ListItem} from "@chakra-ui/react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import ShareButton from "../molecules/ShareButton";
-import Title from "../atoms/button/Title";
+import ShareButton from "../molecules/button/ShareButton";
+import Title from "../atoms/text/Title";
 
 const PrivacyPolicy: VFC = memo(() => {
 	return (

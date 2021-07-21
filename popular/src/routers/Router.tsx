@@ -1,12 +1,12 @@
 import {VFC, memo} from "react";
-
-import {Login} from "../components/pages/Login";
-import {Page404} from "../components/pages/Page404";
-import {Home} from "../components/pages/user/Home";
 import {Route, Switch} from "react-router-dom";
+
 import {contactRoutes} from "./ContactRoutes";
 import {LoginUserProvider} from "../hooks/providers/useLoginUserProvider";
 import Layout from "../components/templates/Layout";
+import Login from "../components/pages/Login";
+import Page404 from "../components/pages/Page404";
+import Home from "../components/pages/user/Home";
 import Agreement from "../components/pages/Agreement";
 import PrivacyPolicy from "../components/pages/PrivacyPolicy";
 
