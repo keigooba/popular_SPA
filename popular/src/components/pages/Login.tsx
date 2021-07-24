@@ -1,11 +1,13 @@
-import {Box, Button, Flex, Image, Text} from "@chakra-ui/react";
+import {Button, Flex, Image, Text} from "@chakra-ui/react";
 import {memo, VFC} from "react";
 import {FaTwitter} from "react-icons/fa";
 import {Link, useHistory} from "react-router-dom";
 import {useLoginUser} from "../../hooks/providers/useLoginUserProvider";
-import Title from "../atoms/text/Title";
-import ShareButton from "../molecules/button/ShareButton";
 import styled from "styled-components";
+import Hukidashi from "../../img/hukidashi.png";
+
+import Happy from "../../img/happy.png";
+import Usage from "../organisms/Usage";
 
 const Login: VFC = memo(() => {
 	const {loginUser} = useLoginUser();
@@ -14,22 +16,28 @@ const Login: VFC = memo(() => {
 	const onClickLogin = () => history.push("/home");
 
 	return (
-		<Flex
-			justify="spance-between"
-			padding={{base: 1, md: 2}}
-			mx="auto"
-			color="#9d00ff"
-		>
-			<OrderContainer3 order={2}>
-				{/* <Image src="/img/hukidashi.png" alt="吹き出し" /> */}
-				<Text color="red">これで僕も人気者！！</Text>
+		<Flex justify="spance-between" color="#9d00ff">
+			<OrderContainer3>
+				<Image src={Hukidashi} alt="吹き出し" />
+				<Text
+					color="red"
+					position="absolute"
+					fontWeight="bold"
+					fontSize="2xl"
+					top="135px"
+					left="55px"
+				>
+					これで僕も人気者！！
+				</Text>
 			</OrderContainer3>
-			<OrderContainer2 order={3}>
-				<Text fontSize="2xl" fontWeight="500">フリー画像投稿アプリ</Text>
-				<Text fontSize="5xl" fontWeight="bold">
+			<OrderContainer2>
+				<Text fontSize="2xl" fontWeight="500">
+					フリー画像投稿アプリ
+				</Text>
+				<Text fontSize="7xl" fontWeight="bold" mb={12}>
 					<i className="far fa-image"></i>popular
 				</Text>
-				{/* <Image src="/img/happy.png" alt="喜ぶ家族のイラスト" /> */}
+				<Image src={Happy} alt="喜ぶ家族のイラスト" mb="40px" />
 				{loginUser || (
 					<>
 						<Button
@@ -38,14 +46,14 @@ const Login: VFC = memo(() => {
 							onClick={onClickLogin}
 							width="100%"
 							fontSize="xl"
-							height="40px"
+							height="50px"
 						>
 							ツイッターでログイン
 						</Button>
 						<Text fontSize="xs" color="gray">
 							<SLink to="/agreement">利用規約</SLink>・
 							<SLink to="/privacy_policy">プライバシーポリシー</SLink>
-							に同意の上でご利用ください
+							に同意の上ご利用ください
 						</Text>
 					</>
 				)}
@@ -59,19 +67,15 @@ const Login: VFC = memo(() => {
 					</Button>
 				)}
 			</OrderContainer2>
-			<OrderContainer order={1}>
-				<Title>つかいかた</Title>
-				<Box>
-					<Text>① 好みの画像を検索しよう</Text>
-					<Image src="/popular/src/img/use_img1.png" />
-				</Box>
-				<ShareButton />
+			<OrderContainer>
+				<Usage />
 			</OrderContainer>
 		</Flex>
 	);
 });
 
 const OrderContainer3 = styled.div`
+	position: relative;
 	order: 3;
 	width: 100%;
 `;
@@ -79,11 +83,13 @@ const OrderContainer3 = styled.div`
 const OrderContainer2 = styled.div`
 	order: 2;
 	width: 100%;
+	padding-right: 2.5rem;
 `;
 
 const OrderContainer = styled.div`
 	order: 1;
 	width: 100%;
+	padding-right: 2rem;
 `;
 
 const SLink = styled(Link)`

@@ -15,7 +15,7 @@ const Footer: VFC = memo(() => {
 			<Br />
 			<SLink to="/contact">お問い合わせ</SLink>
 			<Br />
-			<SLink to="https://twitter.com/hx_kei">
+			<Text href="https://twitter.com/hx_kei" as="a" color="#9d00ff">
 				運営者
 				<Image
 					src="https://bit.ly/sage-adebayo"
@@ -27,7 +27,7 @@ const Footer: VFC = memo(() => {
 					display="inline"
 				/>
 				@hx_kei
-			</SLink>
+			</Text>
 		</Container>
 	);
 });
