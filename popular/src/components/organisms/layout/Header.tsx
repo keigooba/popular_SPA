@@ -20,7 +20,7 @@ const Header: VFC = memo(() => {
 	const {loginUser} = useLoginUser();
 	console.log(loginUser);
 	const history = useHistory();
-	const onClickHome = useCallback(() => history.push("/home"), [history]);
+	const onClickHome = useCallback(() => history.push("/"), [history]);
 	const onClickLogout = useCallback(() => history.push("/logout"), [history]);
 
 	const onClickLogin = () => login("1");

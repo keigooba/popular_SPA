@@ -24,11 +24,7 @@ const Contact: VFC = memo(() => {
 					(https://popular-32pe64nwja-an.a.run.app)
 				</Text>
 			</Text>
-			<PrimaryButton
-				colorScheme="teal"
-				onClickUrl="/contact/list"
-				width="50%"
-			>
+			<PrimaryButton colorScheme="teal" onClickUrl="/contact/list" width="50%">
 				お問い合わせ一覧
 			</PrimaryButton>
 			<Text fontSize="xs">公開(2021/07/30)から3ヶ月間のみ表示</Text>
