@@ -17,11 +17,11 @@ import Usage from "../../organisms/Usage";
 import Title from "../../atoms/text/Title";
 import ImageCard from "../../organisms/user/ImageWrap";
 import ModalImage from "../../organisms/user/ModalImage";
-import {useImages} from "../../../hooks/useImages";
+import {usePixabay} from "../../../hooks/usePixabay";
 
 const Home: VFC = memo(() => {
 	const {isOpen, onOpen, onClose} = useDisclosure();
-	const {getPixabay, users, loading} = useImages();
+	const {getPixabay, users, loading} = usePixabay();
 	const [imageName, setImageName] = useState("");
 
 	const onChangeImageName = useCallback(
@@ -33,6 +33,7 @@ const Home: VFC = memo(() => {
 		[getPixabay, onOpen]
 	);
 
+	// console.log(users.i["1"]);
 
 	return (
 		<>

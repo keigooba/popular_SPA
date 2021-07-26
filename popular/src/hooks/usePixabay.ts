@@ -1,18 +1,18 @@
 import axios from "axios";
 import { useCallback, useState } from "react";
 
-import { User } from "../types/api/user";
 import { useMessage } from "./useMessage";
 
-export const useImages = () => {
+export const usePixabay = () => {
   const { showMessage } = useMessage();
   const [loading, setLoading] = useState<boolean>(false);
-  const [users, setUsers] = useState<Array<User>>([]);
+  const [users, setUsers] = useState<Array<string>>([]);
+	const pixabayKey = process.env.REACT_APP_PIXABAY_KEY;
 
   const getPixabay = useCallback(() => {
     setLoading(true);
     axios
-      .get<Array<User>>("https://jsonplaceholder.typicode.com/users") //https://pixabay.com/api/?key={{.PixabayKey}}
+      .get<Array<string>>(`https://pixabay.comss/api/?key=${pixabayKey}&q=テスト&per_page=`+ 200)
       .then((res) => setUsers(res.data))
       .catch(() => {
         showMessage({ title: "ユーザー取得に失敗しました", status: "error" });
@@ -20,6 +20,6 @@ export const useImages = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [setLoading,showMessage]);
+  }, [pixabayKey,setLoading,showMessage]);
   return { getPixabay, loading, users };
 };
