@@ -18,8 +18,8 @@ type Props = {
 };
 
 const ModalImage: VFC<Props> = memo((props) => {
-	const {isOpen, onClose, users} = props;
-	console.log(users);
+	const {isOpen, onClose} = props;
+
 	return (
 		<Modal isOpen={isOpen} onClose={onClose} autoFocus={false}>
 			<ModalOverlay />

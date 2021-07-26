@@ -25,3 +25,5 @@ deps:
 	$(NPMCMD) @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 	$(NPMCMD) styled-components
 	$(NPMCMD) react-icons
+	$(NPMCMD) firebase
+	$(NPMCMD) react-hook-form

@@ -2,6 +2,7 @@ import {Text} from "@chakra-ui/react";
 import {memo, VFC} from "react";
 import PrimaryButton from "../atoms/button/PrimaryButton";
 import Title from "../atoms/text/Title";
+import ContactForm from "../organisms/form/ContactForm";
 
 const Contact: VFC = memo(() => {
 	const onClickUrl = () => {
@@ -27,7 +28,7 @@ const Contact: VFC = memo(() => {
 			<PrimaryButton colorScheme="teal" onClickUrl="/contact/list" width="50%">
 				お問い合わせ一覧
 			</PrimaryButton>
-			<Text fontSize="xs">公開(2021/07/30)から3ヶ月間のみ表示</Text>
+			<ContactForm />
 		</>
 	);
 });
