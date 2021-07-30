@@ -3,6 +3,7 @@ import {memo, VFC, useState, useEffect} from "react";
 import PrimaryButton from "../../atoms/button/PrimaryButton";
 import Title from "../../atoms/text/Title";
 import {db} from "../../../firebase";
+import {ArrayOS, ArrayBrowser} from "../../organisms/form/ContactForm";
 
 const List: VFC = memo(() => {
 	const [contactList, SetContactList] = useState([
@@ -22,9 +23,9 @@ const List: VFC = memo(() => {
 			SetContactList(
 				snapshot.docs.map((doc) => ({
 					id: doc.id,
-					browser_id: doc.data().browser_id,
+					browser_id: ArrayBrowser[doc.data().browser_id],
 					content: doc.data().content,
-					os_id: doc.data().os_id,
+					os_id: ArrayOS[doc.data().os_id],
 					other_browser: doc.data().other_browser,
 					other_os: doc.data().other_os,
 					twitter_name: doc.data().twitter_name,
@@ -38,11 +39,13 @@ const List: VFC = memo(() => {
 		<>
 			<Title>お問い合わせ一覧</Title>
 			<Table variant="simple" mb={20}>
-				<TableCaption fontWeight="bold">ご協力ありがとう！</TableCaption>
+				<TableCaption fontWeight="bold">
+					ご協力ありがとうございます！
+				</TableCaption>
 				<Thead>
 					<Tr>
 						<Th>ID</Th>
-						<Th width="500px">内容</Th>
+						<Th width="450px">内容</Th>
 						<Th>お使いのOS</Th>
 						<Th>お使いのブラウザ</Th>
 						<Th>ツイッターアカウント名</Th>

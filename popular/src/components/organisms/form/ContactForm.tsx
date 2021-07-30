@@ -10,6 +10,16 @@ import {db} from "../../../firebase";
 import {useMessage} from "../../../hooks/useMessage";
 import {useHistory} from "react-router-dom";
 
+export const ArrayOS = ["iPhone", "Android", "Mac", "Windows", "その他"];
+
+export const ArrayBrowser = [
+	"Safari",
+	"Chrome",
+	"Twitterのブラウザ",
+	"Firefox",
+	"その他",
+];
+
 const ContactForm: VFC = memo(() => {
 	const [content, setContent] = useState("");
 	const [selectOS, setSelectOS] = useState({value: ""});
@@ -52,22 +62,6 @@ const ContactForm: VFC = memo(() => {
 		history.push("/contact/list");
 	};
 
-	const arrayOS = [
-		{name: "iPhone"},
-		{name: "Android"},
-		{name: "Mac"},
-		{name: "Windows"},
-		{name: "その他"},
-	];
-
-	const arrayBrowser = [
-		{name: "Safari"},
-		{name: "Chrome"},
-		{name: "Twitterのブラウザ"},
-		{name: "Firefox"},
-		{name: "その他"},
-	];
-
 	return (
 		<Container>
 			<FromTextarea
@@ -79,7 +73,7 @@ const ContactForm: VFC = memo(() => {
 			<FormSelect
 				name="OS"
 				id="selectOS"
-				selects={arrayOS}
+				selects={ArrayOS}
 				setSelect={setSelectOS}
 				value={selectOS}
 				setOther={setOtherOS}
@@ -88,7 +82,7 @@ const ContactForm: VFC = memo(() => {
 			<FormSelect
 				name="ブラウザ"
 				id="selectBrowser"
-				selects={arrayBrowser}
+				selects={ArrayBrowser}
 				setSelect={setSelectBrowser}
 				value={selectBrowser}
 				setOther={setOtherBrowser}

@@ -44,7 +44,7 @@ const FormSelect: VFC<Props> = memo((props) => {
 				<MultSelect multiple id={id} onChange={onChangeSelect}>
 					{selects.map((select, index) => (
 						<option key={index} value={index}>
-							{select.name}
+							{select}
 						</option>
 					))}
 				</MultSelect>

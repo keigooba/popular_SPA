@@ -34,10 +34,10 @@ const Login: VFC = memo(() => {
 				<Text fontSize="2xl" fontWeight="500">
 					フリー画像投稿アプリ
 				</Text>
-				<Text fontSize="7xl" fontWeight="bold" mb={12}>
+				<Text fontSize="7xl" fontWeight="bold" mb={14}>
 					<i className="far fa-image"></i>popular
 				</Text>
-				<Image src={Happy} alt="喜ぶ家族のイラスト" mb="40px" />
+				<Image src={Happy} alt="喜ぶ家族のイラスト" mb="60px" />
 				{loginUser || (
 					<>
 						<Button
