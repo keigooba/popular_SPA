@@ -3,7 +3,7 @@
 [popular](https://github.com/keigooba/popular)をReactでSPA化<br />
 コンポーネント分割はatomic designを採用
 
-サイト URL:
+サイト URL:https://popular-e7b81.web.app<br />
 
 ## 概要
 
