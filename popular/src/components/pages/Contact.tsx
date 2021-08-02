@@ -6,7 +6,7 @@ import ContactForm from "../organisms/form/ContactForm";
 
 const Contact: VFC = memo(() => {
 	const onClickUrl = () => {
-		window.location.href = "https://popular-32pe64nwja-an.a.run.app";
+		window.location.href = "https://popular-e7b81.web.app";
 	};
 
 	return (
@@ -22,7 +22,7 @@ const Contact: VFC = memo(() => {
 					_hover={{cursor: "pointer"}}
 					color="#9d00ff"
 				>
-					(https://popular-32pe64nwja-an.a.run.app)
+					(https://popular-e7b81.web.app)
 				</Text>
 			</Text>
 			<PrimaryButton colorScheme="teal" onClickUrl="/contact/list" width="50%">

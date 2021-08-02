@@ -17,8 +17,7 @@ all: deps
 # 	rm -f $(BINARY_NAME)
 # 	$(GOMOD) tidy -v
 # run:
-# 	$(GOBUILD) -o $(BINARY_NAME) -v
-# 	./$(BINARY_NAME)
+	$(NPMCMD) run build
 deps:
 	$(NPMCMD) react-router-dom @types/react-router-dom
 	$(NPMCMD) axios
