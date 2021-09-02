@@ -54,7 +54,7 @@ docker-compose exec node bash
 2. Cloud Firestore(NoSQL)
 
 学習記録
-1.モダンJavaScriptの基礎から始める挫折しないためのReact入門 (https://www.udemy.com/share/103Myn3@KL4e1443gHfrxlLXlrs87ziA1KEXNMYwsqSPjVVWOnYFlkw22TT6QYfO5Krg_bf5oA==/ ) 7月3日修了
-2.Reactに入門した人のためのもっとReactが楽しくなるステップアップコース完全版 (https://www.udemy.com/share/104dFO3@-9MuvrbpaUp6K1W-eycsl7iJa1w9y4Tj30B2L8Gn9Qg-qXBErBR7xCcua5ZLe2LFYg==/ ) 7月10日修了
-3.最速で学ぶFirebase + React Hooks (TypeScript) (https://www.udemy.com/share/103HLe3@AF0rN8q5mSmCqLVdyz-JnyDK-dbmizt6TNxRhnS2ztnlE4-iplFJyYoYpVG_krdHHg==/ ) 7月10日〜
+1.モダンJavaScriptの基礎から始める挫折しないためのReact入門 (https://www.udemy.com/share/103Myn3@KL4e1443gHfrxlLXlrs87ziA1KEXNMYwsqSPjVVWOnYFlkw22TT6QYfO5Krg_bf5oA==/ ) 7月3日修了<br>
+2.Reactに入門した人のためのもっとReactが楽しくなるステップアップコース完全版 (https://www.udemy.com/share/104dFO3@-9MuvrbpaUp6K1W-eycsl7iJa1w9y4Tj30B2L8Gn9Qg-qXBErBR7xCcua5ZLe2LFYg==/ ) 7月10日修了<br>
+3.最速で学ぶFirebase + React Hooks (TypeScript) (https://www.udemy.com/share/103HLe3@AF0rN8q5mSmCqLVdyz-JnyDK-dbmizt6TNxRhnS2ztnlE4-iplFJyYoYpVG_krdHHg==/ ) 7月10日〜<br>
 4.本アプリ8月2日デプロイ　
